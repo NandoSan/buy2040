@@ -1,0 +1,1038 @@
+<!DOCTYPE HTML>
+<html manifest="">
+<head>
+    <meta charset="utf-8">
+    <title>WhileLoop</title>
+    <meta name="description" content="WhileLoopAppExample">
+    <meta name="author" content="FabioSanvido">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="cleartype" content="on">
+
+    <!-- iPhone -->
+    <!-- <link href="http://lungo.tapquo.com/resources/icon-57.png" sizes="57x57" rel="apple-touch-icon">
+    <link href="http://lungo.tapquo.com/resources/startup-image-320x460.png" media="(device-width: 320px) and (device-height: 480px)
+             and (-webkit-device-pixel-ratio: 1)" rel="apple-touch-startup-image"> -->
+
+    <!-- iPhone (Retina) -->
+    <!-- <link href="http://lungo.tapquo.com/resources/icon-114.png" sizes="114x114" rel="apple-touch-icon">
+    <link href="http://lungo.tapquo.com/resources/startup-image-640x920.png" media="(device-width: 320px) and (device-height: 480px)
+             and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image"> -->
+
+    <!-- iPhone 5 -->
+    <!-- <link href="http://lungo.tapquo.com/resources/startup-image-640x1096.png" media="(device-width: 320px) and (device-height: 568px)
+             and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image"> -->
+
+    <!-- iPad -->
+    <link href="imgs/icon-72.png" sizes="72x72" rel="apple-touch-icon">
+    <link href="imgs/startup-image-768x1004.png" media="(device-width: 768px) and (device-height: 1024px)
+             and (orientation: portrait)
+             and (-webkit-device-pixel-ratio: 1)" rel="apple-touch-startup-image">
+    <link href="imgs/startup-image-748x1024.png" media="(device-width: 768px) and (device-height: 1024px)
+             and (orientation: landscape)
+             and (-webkit-device-pixel-ratio: 1)" rel="apple-touch-startup-image">
+
+    <!-- iPad (Retina) -->
+    <link href="imgs/icon-144.png" sizes="144x144" rel="apple-touch-icon">
+    <link href="imgs/startup-image-1536x2008.png" media="(device-width: 768px) and (device-height: 1024px)
+             and (orientation: portrait)
+             and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+    <link href="imgs/startup-image-1496x2048.png" media="(device-width: 768px) and (device-height: 1024px)
+             and (orientation: landscape)
+             and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+
+    <!-- Lungo - Stylesheets -->
+    <link rel="stylesheet" href="components/lungo/lungo.css">
+    <link rel="stylesheet" href="components/lungo/lungo.icon.css">
+    <link rel="stylesheet" href="components/lungo/lungo.icon.brand.css">
+    <link rel="stylesheet" href="components/lungo/lungo.theme.default.css">
+    <link rel="stylesheet" href="democss/app.css">
+</head>
+
+<body class="app">
+    <section id="main" data-transition="slide">
+        <header  class="">
+            <nav class="left button">
+                <a href="#features" data-router="aside" ><strong>Menu</strong></a>
+            </nav>
+            <div class="centered title with-subtitle">
+                WhiteLoopStudio
+                <small class="subtitle">your photo albums always with you</small>
+            </div>
+        </header>
+
+        <!-- All my albums -->
+        <article id="albumsGallery" class="indented scroll">
+            <!-- <a href="#album" data-router="section"><img class="shadow" src="albums/Federica&Marco/thumb.png"></a> -->
+            <!-- Images dynamically created -->
+            <img class="shadow" src="imgs/plus.png">
+        </article>
+
+        <!-- Setting Page -->
+        <article id="settingArticle" class="list scroll indented">
+            <ul>
+                <li><strong>WhiteLoop account</strong><span class="right" data-label="logOut"></span><small>admin</small></li>
+                <li><strong>FaceBook account</strong><small>admin</small></li>
+                <li><strong>Add new album</strong><small>admin</small></li>
+            </ul>
+        </article>
+
+        <article id="addAlbum">
+            <h1>ADD NEW ALBUM</h1>
+        </article>
+    </section>
+
+    <section id="pola-1" class="pola" data-transition="slide">
+        <header>
+            <nav class="left button">
+                <a class="bkm" href="#" data-icon="left"></a>
+            </nav>
+            
+            <div class="centered title with-subtitle">
+                Federica e Marco · 4 Agosto 2012
+                <small class="subtitle">And the dreams that you dare to dream really do come true...</small>
+            </div>
+            <nav class="right button">
+                <a href="#bird" data-router="section" data-icon="eye"></a>
+                <a href="#pola_chap" data-router="aside" data-icon="book"></a>
+            </nav>
+        </header>
+        <!-- GettingReady chapter 13 photos, 4 articles +1 Photo -->
+        <article>
+            <div class="one column"></div>
+            <div class="eight columns">
+                <div class="five rows">
+                    <div class="four columns">
+                        <div class="externo2">
+                            <img src="albums/Federica&Marco/GettingReady/thumbnails/GR1.png" alt="alt-attribute">
+                        </div>
+                    </div>
+                    <div class="two columns"></div>
+                    <div class="four columns">
+                        <div class="externo2" style="margin-left:-15%; margin-top:10%; -webkit-transform: rotate(6deg);">
+                            <img src="albums/Federica&Marco/GettingReady/thumbnails/GR2.png" alt="alt-attribute">
+                        </div>
+                    </div>
+                </div>
+                <div class="five rows">
+                    <div class="two columns"></div>
+                    <div class="three columns">
+                        <div style="float:right; margin-top:-15%; -webkit-transform: rotate(2deg);" class="externo2" data-polatitle="data-polatitle">
+                            <img src="albums/Federica&Marco/GettingReady/thumbnails/GR3.png" alt="first photo">
+                        </div>
+                    </div>
+                    <div class="one column"></div>
+                    <div class="four columns">
+                        <div style="float:right; margin-top:-20%; margin-right=-15%;" class="externo2" data-polatitle="data-polatitle">
+                            <img src="albums/Federica&Marco/GettingReady/thumbnails/GR4.png" alt="first photo">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="one column"></div>
+        </article>
+    </section>
+    <section id="pola-2" class="pola" data-transition="slide">
+        <header>
+            <nav class="left button">
+                <a class="bkm" href="#" data-icon="left"></a>
+            </nav>
+            
+            <div class="centered title with-subtitle">
+                Federica e Marco · 4 Agosto 2012
+                <small class="subtitle">And the dreams that you dare to dream really do come true...</small>
+            </div>
+            <nav class="right button">
+                <a href="#bird" data-router="section" data-icon="eye"></a>
+                <a href="#pola_chap" data-router="aside" data-icon="book"></a>
+            </nav>
+        </header>
+        <!-- GettingReady chapter 13 photos, 4 articles +1 Photo -->
+        <article>
+            <div class="one column"></div>
+            <div class="eight columns">
+                <div class="five rows">
+                    <div class="four columns">
+                        <div class="externo2">
+                            <img src="albums/Federica&Marco/GettingReady/thumbnails/GR5.png" alt="alt-attribute">
+                        </div>
+                    </div>
+                    <div class="two columns"></div>
+                    <div class="four columns">
+                        <div class="externo2" style="margin-left:-15%; margin-top:10%; -webkit-transform: rotate(6deg);">
+                            <img src="albums/Federica&Marco/GettingReady/thumbnails/GR6.png" alt="alt-attribute">
+                        </div>
+                    </div>
+                </div>
+                <div class="five rows">
+                    <div class="two columns"></div>
+                    <div class="three columns">
+                        <div style="float:right; margin-top:-15%; -webkit-transform: rotate(2deg);" class="externo2" data-polatitle="data-polatitle">
+                            <img src="albums/Federica&Marco/GettingReady/thumbnails/GR7.png" alt="first photo">
+                        </div>
+                    </div>
+                    <div class="one column"></div>
+                    <div class="four columns">
+                        <div style="float:right; margin-top:-20%; margin-right=-15%;" class="externo2" data-polatitle="data-polatitle">
+                            <img src="albums/Federica&Marco/GettingReady/thumbnails/GR8.png" alt="first photo">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="one column"></div>
+        </article>
+    </section>
+    <section id="pola-3" class="pola" data-transition="slide">
+        <header>
+            <nav class="left button">
+                <a class="bkm" href="#" data-icon="left"></a>
+            </nav>
+            
+            <div class="centered title with-subtitle">
+                Federica e Marco · 4 Agosto 2012
+                <small class="subtitle">And the dreams that you dare to dream really do come true...</small>
+            </div>
+            <nav class="right button">
+                <a href="#bird" data-router="section" data-icon="eye"></a>
+                <a href="#pola_chap" data-router="aside" data-icon="book"></a>
+            </nav>
+        </header>
+        <!-- GettingReady chapter 13 photos, 4 articles +1 Photo -->
+        <article>
+            <div class="one column"></div>
+            <div class="eight columns">
+                <div class="five rows">
+                    <div class="four columns">
+                        <div class="externo2">
+                            <img src="albums/Federica&Marco/GettingReady/thumbnails/GR9.png" alt="alt-attribute">
+                        </div>
+                    </div>
+                    <div class="two columns"></div>
+                    <div class="four columns">
+                        <div class="externo2" style="margin-left:-15%; margin-top:10%; -webkit-transform: rotate(6deg);">
+                            <img src="albums/Federica&Marco/GettingReady/thumbnails/GR10.png" alt="alt-attribute">
+                        </div>
+                    </div>
+                </div>
+                <div class="five rows">
+                    <div class="two columns"></div>
+                    <div class="three columns">
+                        <div style="float:right; margin-top:-15%; -webkit-transform: rotate(2deg);" class="externo2" data-polatitle="data-polatitle">
+                            <img src="albums/Federica&Marco/GettingReady/thumbnails/GR11.png" alt="first photo">
+                        </div>
+                    </div>
+                    <div class="one column"></div>
+                    <div class="four columns">
+                        <div style="float:right; margin-top:-20%; margin-right=-15%;" class="externo2" data-polatitle="data-polatitle">
+                            <img src="albums/Federica&Marco/GettingReady/thumbnails/GR12.png" alt="first photo">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="one column"></div>
+        </article>
+    </section>
+    <section id="pola-4" class="pola" data-transition="slide">
+        <header>
+            <nav class="left button">
+                <a class="bkm" href="#" data-icon="left"></a>
+            </nav>
+            
+            <div class="centered title with-subtitle">
+                Federica e Marco · 4 Agosto 2012
+                <small class="subtitle">And the dreams that you dare to dream really do come true...</small>
+            </div>
+            <nav class="right button">
+                <a href="#bird" data-router="section" data-icon="eye"></a>
+                <a href="#pola_chap" data-router="aside" data-icon="book"></a>
+            </nav>
+        </header>
+        <!-- GettingReady chapter 13 photos, 4 articles +1 Photo -->
+        <article>
+            <div class="one column"></div>
+            <div class="eight columns">
+                <div class="five rows">
+                    <div class="four columns">
+                        <div class="externo2">
+                            <img src="albums/Federica&Marco/GettingReady/thumbnails/GR13.png" alt="alt-attribute">
+                        </div>
+                    </div>
+                    <div class="two columns"></div>
+                    <div class="four columns">
+                        <div class="externo2" style="margin-left:-15%; margin-top:10%; -webkit-transform: rotate(6deg);">
+                            <img src="albums/Federica&Marco/Ceremony/thumbnails/1.png" alt="alt-attribute">
+                        </div>
+                    </div>
+                </div>
+                <div class="five rows">
+                    <div class="two columns"></div>
+                    <div class="three columns">
+                        <div style="float:right; margin-top:-15%; -webkit-transform: rotate(2deg);" class="externo2" data-polatitle="data-polatitle">
+                            <img src="albums/Federica&Marco/Ceremony/thumbnails/2.png" alt="first photo">
+                        </div>
+                    </div>
+                    <div class="one column"></div>
+                    <div class="four columns">
+                        <div style="float:right; margin-top:-20%; margin-right=-15%;" class="externo2" data-polatitle="data-polatitle">
+                            <img src="albums/Federica&Marco/Ceremony/thumbnails/3.png" alt="first photo">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="one column"></div>
+        </article>
+    </section>
+    <section id="pola-5" class="pola" data-transition="slide">
+        <header>
+            <nav class="left button">
+                <a class="bkm" href="#" data-icon="left"></a>
+            </nav>
+            
+            <div class="centered title with-subtitle">
+                Federica e Marco · 4 Agosto 2012
+                <small class="subtitle">And the dreams that you dare to dream really do come true...</small>
+            </div>
+            <nav class="right button">
+                <a href="#bird" data-router="section" data-icon="eye"></a>
+                <a href="#pola_chap" data-router="aside" data-icon="book"></a>
+            </nav>
+        </header>
+        <!-- GettingReady chapter 13 photos, 4 articles +1 Photo -->
+        <article>
+            <div class="one column"></div>
+            <div class="eight columns">
+                <div class="five rows">
+                    <div class="four columns">
+                        <div class="externo2">
+                            <img src="albums/Federica&Marco/Ceremony/thumbnails/4.png" alt="alt-attribute">
+                        </div>
+                    </div>
+                    <div class="two columns"></div>
+                    <div class="four columns">
+                        <div class="externo2" style="margin-left:-15%; margin-top:10%; -webkit-transform: rotate(6deg);">
+                            <img src="albums/Federica&Marco/Ceremony/thumbnails/5.png" alt="alt-attribute">
+                        </div>
+                    </div>
+                </div>
+                <div class="five rows">
+                    <div class="two columns"></div>
+                    <div class="three columns">
+                        <div style="float:right; margin-top:-15%; -webkit-transform: rotate(2deg);" class="externo2" data-polatitle="data-polatitle">
+                            <img src="albums/Federica&Marco/Ceremony/thumbnails/6.png" alt="first photo">
+                        </div>
+                    </div>
+                    <div class="one column"></div>
+                    <div class="four columns">
+                        <div style="float:right; margin-top:-20%; margin-right=-15%;" class="externo2" data-polatitle="data-polatitle">
+                            <img src="albums/Federica&Marco/Ceremony/thumbnails/7.png" alt="first photo">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="one column"></div>
+        </article>
+    </section>
+    <section id="pola-6" class="pola" data-transition="slide">
+        <header>
+            <nav class="left button">
+                <a class="bkm" href="#" data-icon="left"></a>
+            </nav>
+            
+            <div class="centered title with-subtitle">
+                Federica e Marco · 4 Agosto 2012
+                <small class="subtitle">And the dreams that you dare to dream really do come true...</small>
+            </div>
+            <nav class="right button">
+                <a href="#bird" data-router="section" data-icon="eye"></a>
+                <a href="#pola_chap" data-router="aside" data-icon="book"></a>
+            </nav>
+        </header>
+        <!-- GettingReady chapter 13 photos, 4 articles +1 Photo -->
+        <article>
+            <div class="one column"></div>
+            <div class="eight columns">
+                <div class="five rows">
+                    <div class="four columns">
+                        <div class="externo2">
+                            <img src="albums/Federica&Marco/Ceremony/thumbnails/8.png" alt="alt-attribute">
+                        </div>
+                    </div>
+                    <div class="two columns"></div>
+                    <div class="four columns">
+                        <div class="externo2" style="margin-left:-15%; margin-top:10%; -webkit-transform: rotate(6deg);">
+                            <img src="albums/Federica&Marco/Ceremony/thumbnails/9.png" alt="alt-attribute">
+                        </div>
+                    </div>
+                </div>
+                <div class="five rows">
+                    <div class="two columns"></div>
+                    <div class="three columns">
+                        <div style="float:right; margin-top:-15%; -webkit-transform: rotate(2deg);" class="externo2" data-polatitle="data-polatitle">
+                            <img src="albums/Federica&Marco/Ceremony/thumbnails/10.png" alt="first photo">
+                        </div>
+                    </div>
+                    <div class="one column"></div>
+                    <div class="four columns">
+                        <div style="float:right; margin-top:-20%; margin-right=-15%;" class="externo2" data-polatitle="data-polatitle">
+                            <img src="albums/Federica&Marco/Ceremony/thumbnails/11.png" alt="first photo">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="one column"></div>
+        </article>
+    </section>
+    <section id="pola-7" class="pola" data-transition="slide">
+        <header>
+            <nav class="left button">
+                <a class="bkm" href="#" data-icon="left"></a>
+            </nav>
+            
+            <div class="centered title with-subtitle">
+                Federica e Marco · 4 Agosto 2012
+                <small class="subtitle">And the dreams that you dare to dream really do come true...</small>
+            </div>
+            <nav class="right button">
+                <a href="#bird" data-router="section" data-icon="eye"></a>
+                <a href="#pola_chap" data-router="aside" data-icon="book"></a>
+            </nav>
+        </header>
+        <!-- GettingReady chapter 13 photos, 4 articles +1 Photo -->
+        <article>
+            <div class="one column"></div>
+            <div class="eight columns">
+                <div class="five rows">
+                    <div class="four columns">
+                        <div class="externo2">
+                            <img src="albums/Federica&Marco/Ceremony/thumbnails/12.png" alt="alt-attribute">
+                        </div>
+                    </div>
+                    <div class="two columns"></div>
+                    <div class="four columns">
+                        <div class="externo2" style="margin-left:-15%; margin-top:10%; -webkit-transform: rotate(6deg);">
+                            <img src="albums/Federica&Marco/Ceremony/thumbnails/13.png" alt="alt-attribute">
+                        </div>
+                    </div>
+                </div>
+                <div class="five rows">
+                    <div class="two columns"></div>
+                    <div class="three columns">
+                        <div style="float:right; margin-top:-15%; -webkit-transform: rotate(2deg);" class="externo2" data-polatitle="data-polatitle">
+                            <img src="albums/Federica&Marco/Ceremony/thumbnails/14.png" alt="first photo">
+                        </div>
+                    </div>
+                    <div class="one column"></div>
+                    <div class="four columns">
+                        <div style="float:right; margin-top:-20%; margin-right=-15%;" class="externo2" data-polatitle="data-polatitle">
+                            <img src="albums/Federica&Marco/Ceremony/thumbnails/15.png" alt="first photo">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="one column"></div>
+        </article>
+    </section>
+    <section id="pola-8" class="pola" data-transition="slide">
+        <header>
+            <nav class="left button">
+                <a class="bkm" href="#" data-icon="left"></a>
+            </nav>
+            
+            <div class="centered title with-subtitle">
+                Federica e Marco · 4 Agosto 2012
+                <small class="subtitle">And the dreams that you dare to dream really do come true...</small>
+            </div>
+            <nav class="right button">
+                <a href="#bird" data-router="section" data-icon="eye"></a>
+                <a href="#pola_chap" data-router="aside" data-icon="book"></a>
+            </nav>
+        </header>
+        <!-- GettingReady chapter 13 photos, 4 articles +1 Photo -->
+        <article>
+            <div class="one column"></div>
+            <div class="eight columns">
+                <div class="five rows">
+                    <div class="four columns">
+                        <div class="externo2">
+                            <img src="albums/Federica&Marco/Ceremony/thumbnails/16.png" alt="alt-attribute">
+                        </div>
+                    </div>
+                    <div class="two columns"></div>
+                    <div class="four columns">
+                        <div class="externo2" style="margin-left:-15%; margin-top:10%; -webkit-transform: rotate(6deg);">
+                            <img src="albums/Federica&Marco/Ceremony/thumbnails/17.png" alt="alt-attribute">
+                        </div>
+                    </div>
+                </div>
+                <div class="five rows">
+                    <div class="two columns"></div>
+                    <div class="three columns">
+                        <div style="float:right; margin-top:-15%; -webkit-transform: rotate(2deg);" class="externo2" data-polatitle="data-polatitle">
+                            <img src="albums/Federica&Marco/Ceremony/thumbnails/18.png" alt="first photo">
+                        </div>
+                    </div>
+                    <div class="one column"></div>
+                    <div class="four columns">
+                        <div style="float:right; margin-top:-20%; margin-right=-15%;" class="externo2" data-polatitle="data-polatitle">
+                            <img src="albums/Federica&Marco/Ceremony/thumbnails/19.png" alt="first photo">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="one column"></div>
+        </article>
+    </section>
+    <section id="pola-9" class="pola" data-transition="slide">
+        <header>
+            <nav class="left button">
+                <a class="bkm" href="#" data-icon="left"></a>
+            </nav>
+            
+            <div class="centered title with-subtitle">
+                Federica e Marco · 4 Agosto 2012
+                <small class="subtitle">And the dreams that you dare to dream really do come true...</small>
+            </div>
+            <nav class="right button">
+                <a href="#bird" data-router="section" data-icon="eye"></a>
+                <a href="#pola_chap" data-router="aside" data-icon="book"></a>
+            </nav>
+        </header>
+        <!-- GettingReady chapter 13 photos, 4 articles +1 Photo -->
+        <article>
+            <div class="one column"></div>
+            <div class="eight columns">
+                <div class="five rows">
+                    <div class="four columns">
+                        <div class="externo2">
+                            <img src="albums/Federica&Marco/Ceremony/thumbnails/20.png" alt="alt-attribute">
+                        </div>
+                    </div>
+                    <div class="two columns"></div>
+                    <div class="four columns">
+                        <div class="externo2" style="margin-left:-15%; margin-top:10%; -webkit-transform: rotate(6deg);">
+                            <img src="albums/Federica&Marco/Ceremony/thumbnails/21.png" alt="alt-attribute">
+                        </div>
+                    </div>
+                </div>
+                <div class="five rows">
+                    <div class="two columns"></div>
+                    <div class="three columns">
+                        <div style="float:right; margin-top:-15%; -webkit-transform: rotate(2deg);" class="externo2" data-polatitle="data-polatitle">
+                            <img src="albums/Federica&Marco/Ceremony/thumbnails/22.png" alt="first photo">
+                        </div>
+                    </div>
+                    <div class="one column"></div>
+                    <div class="four columns">
+                        <div style="float:right; margin-top:-20%; margin-right=-15%;" class="externo2" data-polatitle="data-polatitle">
+                            <img src="albums/Federica&Marco/Ceremony/thumbnails/23.png" alt="first photo">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="one column"></div>
+        </article>
+    </section>
+    <section id="pola-10" class="pola" data-transition="slide">
+        <header>
+            <nav class="left button">
+                <a class="bkm" href="#" data-icon="left"></a>
+            </nav>
+            
+            <div class="centered title with-subtitle">
+                Federica e Marco · 4 Agosto 2012
+                <small class="subtitle">And the dreams that you dare to dream really do come true...</small>
+            </div>
+            <nav class="right button">
+                <a href="#bird" data-router="section" data-icon="eye"></a>
+                <a href="#pola_chap" data-router="aside" data-icon="book"></a>
+            </nav>
+        </header>
+        <!-- GettingReady chapter 13 photos, 4 articles +1 Photo -->
+        <article>
+            <div class="one column"></div>
+            <div class="eight columns">
+                <div class="five rows">
+                    <div class="four columns">
+                        <div class="externo2">
+                            <img src="albums/Federica&Marco/Ceremony/thumbnails/24.png" alt="alt-attribute">
+                        </div>
+                    </div>
+                    <div class="two columns"></div>
+                    <div class="four columns">
+                        <div class="externo2" style="margin-left:-15%; margin-top:10%; -webkit-transform: rotate(6deg);">
+                            <img src="albums/Federica&Marco/Ceremony/thumbnails/25.png" alt="alt-attribute">
+                        </div>
+                    </div>
+                </div>
+                <div class="five rows">
+                    <div class="two columns"></div>
+                    <div class="three columns">
+                        <div style="float:right; margin-top:-15%; -webkit-transform: rotate(2deg);" class="externo2" data-polatitle="data-polatitle">
+                            <img src="albums/Federica&Marco/Ceremony/thumbnails/26.png" alt="first photo">
+                        </div>
+                    </div>
+                    <div class="one column"></div>
+                    <div class="four columns">
+                        <div style="float:right; margin-top:-20%; margin-right=-15%;" class="externo2" data-polatitle="data-polatitle">
+                            <img src="albums/Federica&Marco/Ceremony/thumbnails/27.png" alt="first photo">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="one column"></div>
+        </article>
+    </section>
+    <section id="pola-11" class="pola" data-transition="slide">
+        <header>
+            <nav class="left button">
+                <a class="bkm" href="#" data-icon="left"></a>
+            </nav>
+            
+            <div class="centered title with-subtitle">
+                Federica e Marco · 4 Agosto 2012
+                <small class="subtitle">And the dreams that you dare to dream really do come true...</small>
+            </div>
+            <nav class="right button">
+                <a href="#bird" data-router="section" data-icon="eye"></a>
+                <a href="#pola_chap" data-router="aside" data-icon="book"></a>
+            </nav>
+        </header>
+        <!-- GettingReady chapter 13 photos, 4 articles +1 Photo -->
+        <article>
+            <div class="one column"></div>
+            <div class="eight columns">
+                <div class="five rows">
+                    <div class="four columns">
+                        <div class="externo2">
+                            <img src="albums/Federica&Marco/Ceremony/thumbnails/28.png" alt="alt-attribute">
+                        </div>
+                    </div>
+                    <div class="two columns"></div>
+                    <div class="four columns">
+                        <div class="externo2" style="margin-left:-15%; margin-top:10%; -webkit-transform: rotate(6deg);">
+                            <img src="albums/Federica&Marco/Ceremony/thumbnails/29.png" alt="alt-attribute">
+                        </div>
+                    </div>
+                </div>
+                <div class="five rows">
+                    <div class="two columns"></div>
+                    <div class="three columns">
+                        <div style="float:right; margin-top:-15%; -webkit-transform: rotate(2deg);" class="externo2" data-polatitle="data-polatitle">
+                            <img src="albums/Federica&Marco/Ceremony/thumbnails/30.png" alt="first photo">
+                        </div>
+                    </div>
+                    <div class="one column"></div>
+                    <div class="four columns">
+                        <div style="float:right; margin-top:-20%; margin-right=-15%;" class="externo2" data-polatitle="data-polatitle">
+                            <img src="albums/Federica&Marco/Ceremony/thumbnails/31.png" alt="first photo">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="one column"></div>
+        </article>
+    </section>
+        <!-- <article id="2" data-transition="slide">
+            <div class="one column"></div>
+            <div class="eight columns">
+                <div class="one row"></div>
+                <div class="four rows">
+                    <div class="externo">
+                        <img src="albums/Federica&Marco/GettingReady/GR3.JPG" alt="first photo">
+                    </div>
+                </div>
+                <div class="four rows">
+                    <div class="externo" style="float:right; margin-top:-5%" data-polatitle="data-polatitle">
+                        <img src="albums/Federica&Marco/GettingReady/GR4.JPG" alt="first photo">
+                    </div>
+                </div>
+                <div class="one row"></div>
+            </div>
+            <div class="one column"></div>
+        </article> -->
+
+        <!-- Ceremony chapter 39 photos 10 articles -->
+        
+        <!-- Guests chapter, 17 photos 4 articles +1 photo -->
+
+        <!-- The couple chapter: 26 photos, 6 articles +3 photos-->
+
+        <!-- The party chapter: 17 photos, 5 articles -->
+
+    <section id="bird" data-transition="slide">
+        <header>
+            <nav class="left button">
+                <a href="#back" data-router="section" data-icon="left"></a>
+            </nav>
+            
+            <div class="centered title with-subtitle">
+                Federica e Marco · 4 Agosto 2012
+                <small class="subtitle">And the dreams that you dare to dream really do come true...</small>
+            </div>
+            <nav class="right button">
+                <a href="#chapters" data-router="aside" data-icon="book"></a>
+            </nav>
+        </header>
+        <article id="ready" class="indented scroll">
+            <img class="shadow" src="albums/Federica&Marco/GettingReady/thumbnails/GR1.png">
+            <img class="shadow" src="albums/Federica&Marco/GettingReady/thumbnails/GR2.png">
+            <img class="shadow" src="albums/Federica&Marco/GettingReady/thumbnails/GR3.png">
+            <img class="shadow" src="albums/Federica&Marco/GettingReady/thumbnails/GR4.png">
+            <img class="shadow" src="albums/Federica&Marco/GettingReady/thumbnails/GR5.png">
+            <img class="shadow" src="albums/Federica&Marco/GettingReady/thumbnails/GR6.png">
+            <img class="shadow" src="albums/Federica&Marco/GettingReady/thumbnails/GR7.png">
+            <img class="shadow" src="albums/Federica&Marco/GettingReady/thumbnails/GR8.png">
+            <img class="shadow" src="albums/Federica&Marco/GettingReady/thumbnails/GR9.png">
+            <img class="shadow" src="albums/Federica&Marco/GettingReady/thumbnails/GR10.png">
+            <img class="shadow" src="albums/Federica&Marco/GettingReady/thumbnails/GR11.png">
+            <img class="shadow" src="albums/Federica&Marco/GettingReady/thumbnails/GR12.png">
+            <img class="shadow" src="albums/Federica&Marco/GettingReady/thumbnails/GR13.png">
+        </article>
+        <article id="ceremony" class="indented scroll">
+             <img class="shadow" src="albums/Federica&Marco/Ceremony/thumbnails/C0.png">
+             <img class="shadow" src="albums/Federica&Marco/Ceremony/thumbnails/C1.png">
+             <img class="shadow" src="albums/Federica&Marco/Ceremony/thumbnails/C2.png">
+             <img class="shadow" src="albums/Federica&Marco/Ceremony/thumbnails/C3.png">
+             <img class="shadow" src="albums/Federica&Marco/Ceremony/thumbnails/C4.png">
+             <img class="shadow" src="albums/Federica&Marco/Ceremony/thumbnails/C5.png">
+             <img class="shadow" src="albums/Federica&Marco/Ceremony/thumbnails/C6.png">
+             <img class="shadow" src="albums/Federica&Marco/Ceremony/thumbnails/C7.png">
+             <img class="shadow" src="albums/Federica&Marco/Ceremony/thumbnails/C8.png">
+             <img class="shadow" src="albums/Federica&Marco/Ceremony/thumbnails/C9.png">
+             <img class="shadow" src="albums/Federica&Marco/Ceremony/thumbnails/C10.png">
+             <img class="shadow" src="albums/Federica&Marco/Ceremony/thumbnails/C11.png">
+             <img class="shadow" src="albums/Federica&Marco/Ceremony/thumbnails/C12.png">
+             <img class="shadow" src="albums/Federica&Marco/Ceremony/thumbnails/C13.png">
+             <img class="shadow" src="albums/Federica&Marco/Ceremony/thumbnails/C14.png">
+             <img class="shadow" src="albums/Federica&Marco/Ceremony/thumbnails/C15.png">
+             <img class="shadow" src="albums/Federica&Marco/Ceremony/thumbnails/C16.png">
+             <img class="shadow" src="albums/Federica&Marco/Ceremony/thumbnails/C17.png">
+             <img class="shadow" src="albums/Federica&Marco/Ceremony/thumbnails/C18.png">
+             <img class="shadow" src="albums/Federica&Marco/Ceremony/thumbnails/C19.png">
+             <img class="shadow" src="albums/Federica&Marco/Ceremony/thumbnails/C20.png">
+             <img class="shadow" src="albums/Federica&Marco/Ceremony/thumbnails/C21.png">
+             <img class="shadow" src="albums/Federica&Marco/Ceremony/thumbnails/C22.png">
+             <img class="shadow" src="albums/Federica&Marco/Ceremony/thumbnails/C23.png">
+             <img class="shadow" src="albums/Federica&Marco/Ceremony/thumbnails/C24.png">
+             <img class="shadow" src="albums/Federica&Marco/Ceremony/thumbnails/C25.png">
+             <img class="shadow" src="albums/Federica&Marco/Ceremony/thumbnails/C26.png">
+             <img class="shadow" src="albums/Federica&Marco/Ceremony/thumbnails/C27.png">
+             <img class="shadow" src="albums/Federica&Marco/Ceremony/thumbnails/C28.png">
+             <img class="shadow" src="albums/Federica&Marco/Ceremony/thumbnails/C29.png">
+             <img class="shadow" src="albums/Federica&Marco/Ceremony/thumbnails/C30.png">
+             <img class="shadow" src="albums/Federica&Marco/Ceremony/thumbnails/C31.png">
+             <img class="shadow" src="albums/Federica&Marco/Ceremony/thumbnails/C32.png">
+             <img class="shadow" src="albums/Federica&Marco/Ceremony/thumbnails/C33.png">
+             <img class="shadow" src="albums/Federica&Marco/Ceremony/thumbnails/C34.png">
+             <img class="shadow" src="albums/Federica&Marco/Ceremony/thumbnails/C35.png">
+             <img class="shadow" src="albums/Federica&Marco/Ceremony/thumbnails/C36.png">
+             <img class="shadow" src="albums/Federica&Marco/Ceremony/thumbnails/C37.png">
+             <img class="shadow" src="albums/Federica&Marco/Ceremony/thumbnails/C38.png">
+        </article>
+        <article id="guests" class="indented scroll">
+            <img class="shadow" src="albums/Federica&Marco/Guests/thumbnails/G1.png">
+            <img class="shadow" src="albums/Federica&Marco/Guests/thumbnails/G2.png">
+            <img class="shadow" src="albums/Federica&Marco/Guests/thumbnails/G3.png">
+            <img class="shadow" src="albums/Federica&Marco/Guests/thumbnails/G4.png">
+            <img class="shadow" src="albums/Federica&Marco/Guests/thumbnails/G5.png">
+            <img class="shadow" src="albums/Federica&Marco/Guests/thumbnails/G6.png">
+            <img class="shadow" src="albums/Federica&Marco/Guests/thumbnails/G7.png">
+            <img class="shadow" src="albums/Federica&Marco/Guests/thumbnails/G8.png">
+            <img class="shadow" src="albums/Federica&Marco/Guests/thumbnails/G9.png">
+            <img class="shadow" src="albums/Federica&Marco/Guests/thumbnails/G10.png">
+            <img class="shadow" src="albums/Federica&Marco/Guests/thumbnails/G11.png">
+            <img class="shadow" src="albums/Federica&Marco/Guests/thumbnails/G12.png">
+            <img class="shadow" src="albums/Federica&Marco/Guests/thumbnails/G13.png">
+            <img class="shadow" src="albums/Federica&Marco/Guests/thumbnails/G14.png">
+            <img class="shadow" src="albums/Federica&Marco/Guests/thumbnails/G15.png">
+            <img class="shadow" src="albums/Federica&Marco/Guests/thumbnails/G16.png">
+            <img class="shadow" src="albums/Federica&Marco/Guests/thumbnails/G17.png">
+        </article>
+        <article id="couple" class="indented scroll">
+            <img class="shadow" src="albums/Federica&Marco/Thecouple/thumbnails/F0.png">
+            <img class="shadow" src="albums/Federica&Marco/Thecouple/thumbnails/F1.png">
+            <img class="shadow" src="albums/Federica&Marco/Thecouple/thumbnails/F2.png">
+            <img class="shadow" src="albums/Federica&Marco/Thecouple/thumbnails/F3.png">
+            <img class="shadow" src="albums/Federica&Marco/Thecouple/thumbnails/F4.png">
+            <img class="shadow" src="albums/Federica&Marco/Thecouple/thumbnails/F5.png">
+            <img class="shadow" src="albums/Federica&Marco/Thecouple/thumbnails/F6.png">
+            <img class="shadow" src="albums/Federica&Marco/Thecouple/thumbnails/F7.png">
+            <img class="shadow" src="albums/Federica&Marco/Thecouple/thumbnails/F8.png">
+            <img class="shadow" src="albums/Federica&Marco/Thecouple/thumbnails/F9.png">
+            <img class="shadow" src="albums/Federica&Marco/Thecouple/thumbnails/F10.png">
+            <img class="shadow" src="albums/Federica&Marco/Thecouple/thumbnails/F11.png">
+            <img class="shadow" src="albums/Federica&Marco/Thecouple/thumbnails/F12.png">
+            <img class="shadow" src="albums/Federica&Marco/Thecouple/thumbnails/F13.png">
+            <img class="shadow" src="albums/Federica&Marco/Thecouple/thumbnails/F14.png">
+            <img class="shadow" src="albums/Federica&Marco/Thecouple/thumbnails/F15.png">
+            <img class="shadow" src="albums/Federica&Marco/Thecouple/thumbnails/F16.png">
+            <img class="shadow" src="albums/Federica&Marco/Thecouple/thumbnails/F17.png">
+            <img class="shadow" src="albums/Federica&Marco/Thecouple/thumbnails/F18.png">
+            <img class="shadow" src="albums/Federica&Marco/Thecouple/thumbnails/F19.png">
+            <img class="shadow" src="albums/Federica&Marco/Thecouple/thumbnails/F20.png">
+            <img class="shadow" src="albums/Federica&Marco/Thecouple/thumbnails/F21.png">
+            <img class="shadow" src="albums/Federica&Marco/Thecouple/thumbnails/F22.png">
+            <img class="shadow" src="albums/Federica&Marco/Thecouple/thumbnails/F23.png">
+            <img class="shadow" src="albums/Federica&Marco/Thecouple/thumbnails/F24.png">
+            <img class="shadow" src="albums/Federica&Marco/Thecouple/thumbnails/F25.png">
+        </article>
+        <article id="party" class="indented scroll">
+            <img class="shadow" src="albums/Federica&Marco/Party/thumbnails/P1.png">
+            <img class="shadow" src="albums/Federica&Marco/Party/thumbnails/P2.png">
+            <img class="shadow" src="albums/Federica&Marco/Party/thumbnails/P3.png">
+            <img class="shadow" src="albums/Federica&Marco/Party/thumbnails/P4.png">
+            <img class="shadow" src="albums/Federica&Marco/Party/thumbnails/P5.png">
+            <img class="shadow" src="albums/Federica&Marco/Party/thumbnails/P6.png">
+            <img class="shadow" src="albums/Federica&Marco/Party/thumbnails/P7.png">
+            <img class="shadow" src="albums/Federica&Marco/Party/thumbnails/P8.png">
+            <img class="shadow" src="albums/Federica&Marco/Party/thumbnails/P9.png">
+            <img class="shadow" src="albums/Federica&Marco/Party/thumbnails/P10.png">
+            <img class="shadow" src="albums/Federica&Marco/Party/thumbnails/P11.png">
+            <img class="shadow" src="albums/Federica&Marco/Party/thumbnails/P12.png">
+            <img class="shadow" src="albums/Federica&Marco/Party/thumbnails/P13.png">
+            <img class="shadow" src="albums/Federica&Marco/Party/thumbnails/P14.png">
+            <img class="shadow" src="albums/Federica&Marco/Party/thumbnails/P15.png">
+            <img class="shadow" src="albums/Federica&Marco/Party/thumbnails/P16.png">
+            <img class="shadow" src="albums/Federica&Marco/Party/thumbnails/P17.png">
+        </article>
+    </section>
+
+    <section id="carousel" data-transition="slide">
+        <header>
+            <nav class="box">
+                <a href="#back" data-router="section" data-label="back"></a>
+            </nav>
+
+            <div class="centered title with-subtitle">
+                Federica e Marco · 4 Agosto 2012
+                <small class="subtitle">And the dreams that you dare to dream really do come true...</small>
+            </div>
+
+            <nav class="right box">
+                <a href="#" data-action="carousel" data-direction="left" data-icon="left"></a>
+                <a href="#" data-action="carousel" data-direction="right" data-icon="right"></a>
+            </nav>
+        </header>
+        <article id="carousel-article">
+            <div data-control="carousel" class="carousel">
+                <div >                
+                    <div align="center" class="ten rows">
+                        <img src="albums/Federica&Marco/GettingReady/GR1.JPG">
+                    </div>
+                    <div align="center"><img src="albums/Federica&Marco/GettingReady/GR2.JPG"></div>
+                    <div align="center"><img   src="albums/Federica&Marco/GettingReady/GR3.JPG"></div>
+                    <div align="center"><img   src="albums/Federica&Marco/GettingReady/GR4.JPG"></div>
+                    <div align="center"><img   src="albums/Federica&Marco/GettingReady/GR5.JPG"></div>
+                    <div align="center"><img   src="albums/Federica&Marco/GettingReady/GR6.JPG"></div>
+                    <div align="center"><img   src="albums/Federica&Marco/GettingReady/GR7.JPG"></div>
+                    <div align="center"><img   src="albums/Federica&Marco/GettingReady/GR8.JPG"></div>
+                    <div align="center"><img   src="albums/Federica&Marco/GettingReady/GR9.JPG"></div>
+                    <div align="center"><img   src="albums/Federica&Marco/GettingReady/GR10.JPG"></div>
+                    <div align="center"><img   src="albums/Federica&Marco/GettingReady/GR11.JPG"></div>
+                    <div align="center"><img   src="albums/Federica&Marco/GettingReady/GR12.JPG"></div>
+                    <div align="center"><img   src="albums/Federica&Marco/GettingReady/GR13.JPG"></div>
+                    <div align="center"><img   src="albums/Federica&Marco/Ceremony/1.JPG"></div>
+                    <div align="center"><img   src="albums/Federica&Marco/Ceremony/2.JPG"></div>
+                    <div align="center"><img   src="albums/Federica&Marco/Ceremony/3.JPG"></div>
+                    <div align="center"><img   src="albums/Federica&Marco/Ceremony/4.JPG"></div>
+                    <div align="center"><img   src="albums/Federica&Marco/Ceremony/5.JPG"></div>
+                    <div align="center"><img   src="albums/Federica&Marco/Ceremony/6.JPG"></div>
+                    <div align="center"><img   src="albums/Federica&Marco/Ceremony/7.JPG"></div>
+                    <div align="center"><img   src="albums/Federica&Marco/Ceremony/8.JPG"></div>
+                    <div align="center"><img   src="albums/Federica&Marco/Ceremony/9.JPG"></div>
+                    <div align="center"><img   src="albums/Federica&Marco/Ceremony/10.JPG"></div>
+                    <div align="center"><img   src="albums/Federica&Marco/Ceremony/11.JPG"></div>
+                    <div align="center"><img   src="albums/Federica&Marco/Ceremony/12.JPG"></div>
+                    <div align="center"><img   src="albums/Federica&Marco/Ceremony/13.JPG"></div>
+                    <div align="center"><img   src="albums/Federica&Marco/Ceremony/14.JPG"></div>
+                    <div align="center"><img   src="albums/Federica&Marco/Ceremony/15.JPG"></div>
+                    <div align="center"><img   src="albums/Federica&Marco/Ceremony/16.JPG"></div>
+                    <div align="center"><img   src="albums/Federica&Marco/Ceremony/17.JPG"></div>
+                    <div align="center"><img   src="albums/Federica&Marco/Ceremony/18.JPG"></div>
+                    <div align="center"><img   src="albums/Federica&Marco/Ceremony/19.JPG"></div>
+                    <div align="center"><img   src="albums/Federica&Marco/Ceremony/20.JPG"></div>
+                    <div align="center"><img   src="albums/Federica&Marco/Ceremony/21.JPG"></div>
+                    <div align="center"><img   src="albums/Federica&Marco/Ceremony/22.JPG"></div>
+                    <div align="center"><img   src="albums/Federica&Marco/Ceremony/23.JPG"></div>
+                    <div align="center"><img   src="albums/Federica&Marco/Ceremony/24.JPG"></div>
+                    <div align="center"><img   src="albums/Federica&Marco/Ceremony/25.JPG"></div>
+                    <div align="center"><img   src="albums/Federica&Marco/Ceremony/26.JPG"></div>
+                    <div align="center"><img   src="albums/Federica&Marco/Ceremony/27.JPG"></div>
+                    <div align="center"><img   src="albums/Federica&Marco/Ceremony/28.JPG"></div>
+                    <div align="center"><img   src="albums/Federica&Marco/Ceremony/29.JPG"></div>
+                    <div align="center"><img   src="albums/Federica&Marco/Ceremony/30.JPG"></div>
+                    <div align="center"><img   src="albums/Federica&Marco/Ceremony/31.JPG"></div>
+                    <div align="center"><img   src="albums/Federica&Marco/Ceremony/32.JPG"></div>
+                    <div align="center"><img   src="albums/Federica&Marco/Ceremony/33.JPG"></div>
+                    <div align="center"><img   src="albums/Federica&Marco/Ceremony/34.JPG"></div>
+                    <div align="center"><img   src="albums/Federica&Marco/Ceremony/35.JPG"></div>
+                    <div align="center"><img   src="albums/Federica&Marco/Ceremony/36.JPG"></div>
+                    <div align="center"><img   src="albums/Federica&Marco/Ceremony/37.JPG"></div>
+                    <div align="center"><img   src="albums/Federica&Marco/Ceremony/38.JPG"></div>
+                    <div align="center"><img   src="albums/Federica&Marco/Ceremony/39.JPG"></div>
+                    <div align="center"><img   src="albums/Federica&Marco/Guests/G1.JPG"></div>
+                    <div align="center"><img   src="albums/Federica&Marco/Guests/G2.JPG"></div>
+                    <div align="center"><img   src="albums/Federica&Marco/Guests/G3.JPG"></div>
+                    <div align="center"><img   src="albums/Federica&Marco/Guests/G4.JPG"></div>
+                    <div align="center"><img   src="albums/Federica&Marco/Guests/G5.JPG"></div>
+                    <div align="center"><img   src="albums/Federica&Marco/Guests/G6.JPG"></div>
+                    <div align="center"><img   src="albums/Federica&Marco/Guests/G7.JPG"></div>
+                    <div align="center"><img   src="albums/Federica&Marco/Guests/G8.JPG"></div>
+                    <div align="center"><img   src="albums/Federica&Marco/Guests/G9.JPG"></div>
+                    <div align="center"><img   src="albums/Federica&Marco/Guests/G10.JPG"></div>
+                    <div align="center"><img   src="albums/Federica&Marco/Guests/G11.JPG"></div>
+                    <div align="center"><img   src="albums/Federica&Marco/Guests/G12.JPG"></div>
+                    <div align="center"><img   src="albums/Federica&Marco/Guests/G13.JPG"></div>
+                    <div align="center"><img   src="albums/Federica&Marco/Guests/G14.JPG"></div>
+                    <div align="center"><img   src="albums/Federica&Marco/Guests/G15.JPG"></div>
+                    <div align="center"><img   src="albums/Federica&Marco/Guests/G16.JPG"></div>
+                    <div align="center"><img   src="albums/Federica&Marco/Guests/G17.JPG"></div>
+                    <div align="center"><img   src="albums/Federica&Marco/Thecouple/F0.JPG"></div>
+                    <div align="center"><img   src="albums/Federica&Marco/Thecouple/F1.JPG"></div>
+                    <div align="center"><img   src="albums/Federica&Marco/Thecouple/F2.JPG"></div>
+                    <div align="center"><img   src="albums/Federica&Marco/Thecouple/F3.JPG"></div>
+                    <div align="center"><img   src="albums/Federica&Marco/Thecouple/F4.JPG"></div>
+                    <div align="center"><img   src="albums/Federica&Marco/Thecouple/F5.JPG"></div>
+                    <div align="center"><img   src="albums/Federica&Marco/Thecouple/F6.JPG"></div>
+                    <div align="center"><img   src="albums/Federica&Marco/Thecouple/F7.JPG"></div>
+                    <div align="center"><img   src="albums/Federica&Marco/Thecouple/F8.JPG"></div>
+                    <div align="center"><img   src="albums/Federica&Marco/Thecouple/F9.JPG"></div>
+                    <div align="center"><img   src="albums/Federica&Marco/Thecouple/F10.JPG"></div>
+                    <div align="center"><img   src="albums/Federica&Marco/Thecouple/F11.JPG"></div>
+                    <div align="center"><img   src="albums/Federica&Marco/Thecouple/F12.JPG"></div>
+                    <div align="center"><img   src="albums/Federica&Marco/Thecouple/F13.JPG"></div>
+                    <div align="center"><img   src="albums/Federica&Marco/Thecouple/F14.JPG"></div>
+                    <div align="center"><img   src="albums/Federica&Marco/Thecouple/F15.JPG"></div>
+                    <div align="center"><img   src="albums/Federica&Marco/Thecouple/F16.JPG"></div>
+                    <div align="center"><img   src="albums/Federica&Marco/Thecouple/F17.JPG"></div>
+                    <div align="center"><img   src="albums/Federica&Marco/Thecouple/F18.JPG"></div>
+                    <div align="center"><img   src="albums/Federica&Marco/Thecouple/F19.JPG"></div>
+                    <div align="center"><img   src="albums/Federica&Marco/Thecouple/F20.JPG"></div>
+                    <div align="center"><img   src="albums/Federica&Marco/Thecouple/F21.JPG"></div>
+                    <div align="center"><img   src="albums/Federica&Marco/Thecouple/F22.JPG"></div>
+                    <div align="center"><img   src="albums/Federica&Marco/Thecouple/F23.JPG"></div>
+                    <div align="center"><img   src="albums/Federica&Marco/Thecouple/F24.JPG"></div>
+                    <div align="center"><img   src="albums/Federica&Marco/Thecouple/F25.JPG"></div>
+                    <div align="center"><img   src="albums/Federica&Marco/Party/P1.JPG"></div>
+                    <div align="center"><img   src="albums/Federica&Marco/Party/P2.JPG"></div>
+                    <div align="center"><img   src="albums/Federica&Marco/Party/P3.JPG"></div>
+                    <div align="center"><img   src="albums/Federica&Marco/Party/P4.JPG"></div>
+                    <div align="center"><img   src="albums/Federica&Marco/Party/P5.JPG"></div>
+                    <div align="center"><img   src="albums/Federica&Marco/Party/P6.JPG"></div>
+                    <div align="center"><img   src="albums/Federica&Marco/Party/P7.JPG"></div>
+                    <div align="center"><img   src="albums/Federica&Marco/Party/P8.JPG"></div>
+                    <div align="center"><img   src="albums/Federica&Marco/Party/P9.JPG"></div>
+                    <div align="center"><img   src="albums/Federica&Marco/Party/P10.JPG"></div>
+                    <div align="center"><img   src="albums/Federica&Marco/Party/P11.JPG"></div>
+                    <div align="center"><img   src="albums/Federica&Marco/Party/P12.JPG"></div>
+                    <div align="center"><img   src="albums/Federica&Marco/Party/P13.JPG"></div>
+                    <div align="center"><img   src="albums/Federica&Marco/Party/P14.JPG"></div>
+                    <div align="center"><img   src="albums/Federica&Marco/Party/P15.JPG"></div>
+                    <div align="center"><img   src="albums/Federica&Marco/Party/P16.JPG"></div>
+                    <div align="center"><img   src="albums/Federica&Marco/Party/P17.JPG"></div>
+                </div>
+            </div>
+        </article>
+    </section>
+
+
+    <!-- Left side panel -->
+    <aside id="features">
+        <header data-title="Options"></header>
+        <article class="list">
+            <ul>
+                <li class="anchor">User: WhiteLoop Admin</li>
+                <li>
+                    <strong>Log Out</strong>
+                    <small>You must be logged In in order to<br/>post comments and download new albums
+                    </small>
+                </li>
+                <li class="current">
+                    <a href="#albumsGallery" data-router="article" data-icon="grid">
+                        <div class="right"></div>
+                        <strong>My albums</strong>
+                        <small>Visualize downloaded albums</small>
+                    </a>
+                </li>
+                <li>
+                    <a href="#addAlbum" data-router="article">
+                        <strong>Add new album</strong>
+                        <span class="right" data-icon="plus"></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#settingArticle" data-router="article" data-icon="settings">
+                        <strong>Settings</strong>
+                        <small>Configure app and user account</small>
+                    </a>
+                </li>
+            </ul>
+        </article>
+    </aside>
+
+    <aside id="chapters" class="right">
+        <article class="list">
+            <ul>
+                <li class="current">
+                    <a href="#ready" data-router="article"><strong>GettingReady</strong></a>
+                </li>
+                <li>
+                    <a href="#ceremony" data-router="article"><strong>Ceremony</strong></a>
+                </li>
+                <li>
+                    <a href="#guests" data-router="article"><strong>Guests</strong></a>
+                </li>
+                <li>
+                    <a href="#couple" data-router="article"><strong>Thecouple</strong></a>
+                </li>
+                <li>
+                    <a href="#party" data-router="article"><strong>Party</strong></a>
+                </li>
+            </ul>
+        </article>
+    </aside>
+
+    <aside id="pola_chap" class="right">
+        <article class="list">
+            <ul>
+                <li class="current">
+                    <a href="#pola-1" data-router="section"><strong>GettingReady</strong></a>
+                </li>
+                <li>
+                    <a href="#pola-4" data-router="section"><strong>Ceremony</strong></a>
+                </li>
+                <li>
+                    <a href="#pola-6" data-router="section"><strong>Guests</strong></a>
+                </li>
+                <li>
+                    <a href="#pola-8" data-router="section"><strong>Thecouple</strong></a>
+                </li>
+                <li>
+                    <a href="#pola-10" data-router="section"><strong>Party</strong></a>
+                </li>
+            </ul>
+        </article>
+    </aside>    
+
+
+    <!-- Lungo - Dependencies -->
+    <script src="components/quojs/quo.js"></script>
+    <script src="components/lungo/lungo.js"></script>
+    <!-- Lungo - Sandbox App -->
+    <script src="demojs/app.js"></script>
+    <!-- // <script src="js/localFsFunctions.js"></script> -->
+    <script>
+        // Lungo.init({
+        //     name: 'prueba'
+        // });
+
+        // Lungo.ready(function() {
+        //     Lungo.View.Aside.show('features');
+        // });
+    </script>
+</body>
+</html>
+
