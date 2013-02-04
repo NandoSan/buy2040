@@ -1,0 +1,13 @@
+{
+  "name": "buy2040",
+  "description": "Inspire yourself",
+  "launch_path": "/2040.html",
+  "icons": {
+    "128": "http://cdn.tapquo.com/lungo/icon-114.png"
+  },
+  "developer": {
+    "name": "nando",
+    "url": "www.agiledevers.com"
+  },
+  "default_locale": "es"
+}
